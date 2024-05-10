@@ -1,7 +1,13 @@
 package users;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+
 public class User {
 
+    Scanner sc = new Scanner(System.in);
     // Atributos encapsulados con el modificador private
     private int id;
     private String name;
@@ -69,4 +75,54 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    //Metodo propio
+
+    List<ArrayList<Object>> usuarios = new ArrayList<>();
+
+    ArrayList <Object> usuario = new ArrayList<Object>();
+
+    public  void crearUsuario(){
+        System.out.println("Id:");
+        id = sc.nextInt();
+        sc.nextLine();
+        usuario.add(id);
+        System.out.println("Nombre:");
+        name = sc.nextLine();
+        usuario.add(name);
+        System.out.println("Apellido:");
+        lastName =sc.nextLine();
+        usuario.add(lastName);
+        System.out.println("Telefono:");
+        phone =sc.nextLine();
+        usuario.add(phone);
+        System.out.println("Correo:");
+        mail =sc.nextLine();
+        usuario.add(mail);
+        System.out.println("Contraseña:");
+        password =sc.nextLine();
+        usuario.add(password);
+
+        usuarios.add(usuario);
+
+    }
+
+    public void  printUser(){
+
+        for (Object item : usuario) {
+
+            System.out.println(item);
+
+        }
+    }
+
+    public void  printUsers(){
+
+        for (Object item : usuarios) {
+
+            System.out.println(item);
+
+        }
+    }
+
 }
