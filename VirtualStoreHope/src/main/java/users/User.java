@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class User {
 
+
     Scanner sc = new Scanner(System.in);
     // Atributos encapsulados con el modificador private
     private int id;
@@ -18,11 +19,29 @@ public class User {
 
 
 
-    // Constructor de la clase
+    // Constructor de la clase son los metodos
 
-    // Un constructor es el metodo de la clase, que permite instanciar el objecto  enicilizar los atributos deacuerdo a la logica de negocio
+
+    // Un constructor es el metodo de la clase, que permite instanciar el objecto  e inicilizar los atributos deacuerdo a la logica de negocio
     public User(){
 
+    }
+
+    public User(int id, String name,String lastName, String phone, String mail, String password){
+
+        this.id = id;
+        this.name =name;
+        this.lastName= lastName;
+        this.mail = mail;
+        this.phone = phone;
+        this.password= password;
+
+
+    }
+
+    public User (String mail, String password){
+        this.mail = mail;
+        this.password = password;
     }
 
     // Getter and Setter
@@ -80,9 +99,12 @@ public class User {
 
     List<ArrayList<Object>> usuarios = new ArrayList<>();
 
-    ArrayList <Object> usuario = new ArrayList<Object>();
+    //ArrayList <Object> usuario = new ArrayList<Object>();
+
+
 
     public  void crearUsuario(){
+        ArrayList <Object> usuario = new ArrayList<Object>();
         System.out.println("Id:");
         id = sc.nextInt();
         sc.nextLine();
@@ -107,14 +129,14 @@ public class User {
 
     }
 
-    public void  printUser(){
+    //public void  printUser(){
 
-        for (Object item : usuario) {
+    //    for (Object item : usuario) {
 
-            System.out.println(item);
+    //        System.out.println(item);
 
-        }
-    }
+   //     }
+    //}
 
     public void  printUsers(){
 
